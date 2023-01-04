@@ -1,0 +1,313 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Proxima Nova', sans-serif;
+}
+
+button {
+    width: 100px;
+    height: 100px;
+}
+
+body {
+    color: #403866;
+}
+
+[class*="__container"] {
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px 15px;
+}
+
+.header__container {
+    height: 200px;
+    padding-top: 50px;
+}
+
+.header__info {
+    text-align: center;
+
+}
+
+.main__container {
+    text-align: center;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+[id*="__button"] {
+    background-color: #827ffe;
+    border: none;
+    font-size: 16px;
+    width: 370px;
+    height: 60px;
+    transition: 1s, color 1s;
+    color: white;
+}
+
+
+
+[id*="__button"] p {
+    font-size: 25px;
+}
+
+
+[id*="__button"]:hover {
+    background-color: #403866;
+}
+
+
+
+#regForm {
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.textInput {
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #8f96ad;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #8f96ad;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #8f96ad;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #8f96ad;
+}
+
+
+.aa {
+    font-size: 22px;
+    width: 370px;
+    height: 60px;
+    padding: 25px 40px;
+    background-color: #f5f5f5;
+    transition: 1s;
+
+}
+
+
+
+.aa:focus {
+    animation: rotation 0.5s linear infinite;
+    border: 4px solid #827ffe;
+}
+
+input {
+    font-size: 22px;
+}
+
+
+#test {
+    width: 100%;
+    height: 100%;
+}
+
+
+.addFlex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+
+
+#formZvd1,
+#formZvd4 {
+    display: flex;
+    flex-direction: column;
+}
+
+.zv__answers,
+.zv9__checkBox {
+    padding-left: 190px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+
+
+.zv2__checkBox {
+    columns: 2;
+}
+
+
+#formZvd2 label,
+#formZvd3 label {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+#formZvd3 label {
+    margin-bottom: 10px;
+}
+
+
+
+[id*="test__zv"] {
+    height: 70%;
+    width: 50%;
+}
+
+[id*="test__zv"] h1 {
+    padding-bottom: 30px;
+}
+
+label h3 {
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+
+label {
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+
+
+
+
+#formZvd5 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.colorPicker {
+    width: 100px;
+    height: 52px;
+    margin: 10px;
+    text-align: center;
+}
+
+.colorPicker input {
+    width: 80%;
+    height: 80%;
+    transform: translateY(8%);
+}
+
+
+select {
+    height: 40px;
+    width: 150px;
+    text-align: center;
+    border-radius: 15px;
+    font-size: 18px;
+    background-color: #827ffe;
+
+}
+
+hr {
+    border-color: #827ffe;
+}
+
+
+#formZvd6 {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 250px;
+    width: 400px;
+
+}
+
+.zv6__allBoxs {
+    width: 300px;
+    height: 70px;
+    bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+
+[class*="zv6__boxs"] {
+    width: 80px;
+    height: 92.5px;
+    border: 2px solid;
+}
+
+.zv6__allAnswers {
+    width: 300px;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid;
+}
+
+.zv6__answers {
+    border: 2px solid;
+    width: 80px;
+    height: 72px;
+    position: relative;
+}
+
+
+.zv__answers10 label {
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.zv__answers10 label input {
+    position: relative;
+    left: 220px;
+    top: 20px;
+}
+
+
+
+
+#resultTest {
+
+    position: relative;
+    bottom: 300px;
+    width: 500px;
+    height: 200px;
+    border: 4px #827ffe solid;
+}
+
+#resultTest h1 {
+    font-size: 30px;
+}
+
+#resultTest p {
+    font-size: 22px;
+}

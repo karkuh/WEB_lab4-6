@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="header__container">
+            <div class="header__info">
+                <h1>ТР-12 <br>Каркушевський Владислав<br>Мова розмітки HTML</h1>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Форма реєстрації-->
+        <div class="main__container">
+            <button id="start__button" onclick="start()">
+                <p>Розпочати</p>
+            </button>
+            <div id="registr" hidden>
+                <form id="regForm" onsubmit="return false;">
+                    <label >
+                        <h2>Заповніть поля:</h2>
+                    </label>
+                    <div class="textInput">
+                        <div class="reg__lastName">
+                            <p> <input id="area1" class="aa" type="text" required placeholder="Прізвище"
+                                    name="lastName"></p>
+                        </div>
+                        <div class="reg__firstName">
+                            <p><input id="area2" class="aa" type="text" required placeholder="Ім'я" name="firstName">
+                            </p>
+                        </div>
+                        <div class="reg__group">
+                            <p> <input id="area3" class="aa" type="text" required placeholder="Група" name="group"></p>
+                        </div>
+                    </div>
+                    <button id="registr__button" onclick="valid()">
+                        <p>Register</p>
+                    </button>
+                </form>
+            </div>
+            <div id="test" hidden>
+
+                <!-- 1 питання-->
+                <div id="test__zv1" hidden>
+                    <h1>1 Запитання!</h1>
+                    <form id="formZvd1">
+                        <label >
+                            <h3>HTML - це?</h3>
+                        </label>
+                        <div class="zv__answers">
+                            <label for="pick1"><input type="radio" name="pick" id="pick11"> Мова програмування</label>
+                            <label for="pick2"><input type="radio" name="pick" id="pick12"> Мова гіперрозмітки</label>
+                            <label for="pick3"><input type="radio" name="pick" id="pick13"> Печиво</label>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- 2 питання-->
+                <div id="test__zv2" hidden>
+                    <h1>2 Запитання!</h1>
+                    <form  id="formZvd2">
+                        <label >
+                            <h3>Що з наведеного не є тегом?</h3>
+                        </label>
+                        <div class="zv2__checkBox">
+                            <label><input type="checkbox" id="pick21">header</label>
+                            <label><input type="checkbox" id="pick22">body</label>
+                            <label><input type="checkbox" id="pick23">h1</label>
+                            <label><input type="checkbox" id="pick24">align</label>
+                            <label><input type="checkbox" id="pick25">left</label>
+                            <label><input type="checkbox" id="pick26">p</label>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- 3 питання-->
+                <div id="test__zv3" hidden>
+                    <h1>3 Запитання!</h1>
+                    <form id="formZvd3">
+                        <label>
+                            <h3>Відредагуйте правильно текст</h3>
+                        </label>
+                        <div class="zv3__answers">
+                            <label>
+                                Команди, що визначають розмітку веб-документа, називаються
+                                <select id="select1">
+                                    <option value="pick31" id="pick31">теглями</option>
+                                    <option value="pick32" id="pick32">кеглями</option>
+                                    <option value="pick33" id="pick33">тегами</option>
+                                </select>
+                            </label>
+                            <label>
+                                Кожен тег береться у такі дужки:
+                                <select id="select2">
+                                    <option value="pick34" id="pick34">( ) текст ( )</option>
+                                    <option value="pick35" id="pick35">
+                                        &lt&gt текст &lt&gt
+                                    </option>
+                                    <option value="pick36" id="pick36">[ ] текст [ ]</option>
+                                </select></label>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- 4 питання-->
+                <div id="test__zv4" hidden>
+                    <h1>4 Запитання!</h1>
+                    <form  id="formZvd4">
+                        <label >
+                            <h3>Вебсторінка має розширення ...</h3>
+                        </label>
+                        <label for="pick1"><input type="radio" name="pick" id="pick41"> HTML</label>
+                        <label for="pick2"><input type="radio" name="pick" id="pick42"> XTMP</label>
+                        <label for="pick3"><input type="radio" name="pick" id="pick43"> MTKR</label>
+                    </form>
+                </div>
+
+                <!-- 5 питання-->
+                <div id="test__zv5" hidden>
+                    <h1>5 Запитання!</h1>
+                    <form id="formZvd5">
+                        <label >
+                            <h3>Виберіть колір за такими параметрами:<br>rgb:114,60,215</h3>
+                        </label>
+                        <div class="colorPicker">
+                            <input type="color" id="bgcolor" />
+                        </div>
+                    </form>
+                </div>
+
+                <!-- 6 питання-->
+                <div id="test__zv6" hidden>
+                    <h1>6 Запитання!</h1>
+                    <form  id="formZvd6">
+                        <label>
+                            <h3>Розставте правильно логотипи</h3>
+                        </label>
+                        <div class="zv6__allBoxs">
+                            <div class="zv6__boxs1" ondrop="drop(event)" ondragover="allowDrop(event)">HTML
+                                <hr id="hr1">
+                            </div>
+                            <div class="zv6__boxs2" ondrop="drop(event)" ondragover="allowDrop(event)">CSS
+                                <hr id="hr2">
+                            </div>
+                            <div class="zv6__boxs3" ondrop="drop(event)" ondragover="allowDrop(event)">JS
+                                <hr id="hr3">
+                            </div>
+                        </div>
+                        <div class="zv6__allAnswers">
+                            <div class="zv6__answers" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="drag1"
+                                    src="resours/CSS.svg" draggable="true" ondragstart="drag(event)" width="80"
+                                    height="69"></div>
+                            <div class="zv6__answers" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="drag2"
+                                    src="resours/HTML.svg" draggable="true" ondragstart="drag(event)" width="80"
+                                    height="69"></div>
+                            <div class="zv6__answers" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="drag3"
+                                    src="resours/JS.svg" draggable="true" ondragstart="drag(event)" width="80"
+                                    height="69"></div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- 7 питання-->
+                <div id="test__zv7" hidden>
+                    <h1>7 Запитання!</h1>
+                    <form  id="formZvd7">
+                        <label>
+                            <h3>Яких тегів не існує в HTML:</h3>
+                        </label>
+                        <div class="zv__answers">
+                            <label for="pick1"><input type="radio" name="pick" id="pick71"> одиночні</label>
+                            <label for="pick2"><input type="radio" name="pick" id="pick72"> парні</label>
+                            <label for="pick3"><input type="radio" name="pick" id="pick73"> тройні</label>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- 8 питання-->
+                <div id="test__zv8" hidden>
+                    <h1>8 Запитання!</h1>
+                    <form  id="formZvd8">
+                        <label>
+                            <h3>За допомогою якого тега можна створити посилання у документі?</h3>
+                        </label>
+                        <div class="zv__answers">
+                            <label for="pick1"><input type="radio" name="pick" id="pick81"> &ltp&gt</label>
+                            <label for="pick2"><input type="radio" name="pick" id="pick82"> &lta&gt</label>
+                            <label for="pick3"><input type="radio" name="pick" id="pick83"> &ltlink&gt</label>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- 9 питання-->
+                <div id="test__zv9" hidden>
+                    <h1>9 Запитання!</h1>
+                    <form  id="formZvd9">
+                        <label>
+                            <h3>Який тег задає фіксований розмір заголовка (Декілька правильних відповідей) ?</h3>
+                        </label>
+                        <div class="zv9__checkBox">
+                            <label><input type="checkbox" id="pick91">&lth1&gt ... &lt/h1&gt</label>
+                            <label><input type="checkbox" id="pick92">&ltul&gt ... &lt/ul&gt</label>
+                            <label><input type="checkbox" id="pick93">&ltp&gt ... &lt/p&gt</label>
+                            <label><input type="checkbox" id="pick94">&lth6&gt ... &lt/h6&gt</label>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- 10 питання-->
+                <div id="test__zv10" hidden>
+                    <h1>10 Запитання!</h1>
+                    <form id="formZvd10">
+                        <label >
+                            <h3>Як виглядатиме на сторінці текст з наступною розміткою: <br>
+                                &lti&gt&ltb&gtТекст&lt/b&gt&lt/i&gt<br></h3>
+                        </label>
+                        <div class="zv__answers10">
+                            <label for="pick1"><input type="radio" name="pick" id="pick101">
+                                <p><strong><em>Текст</em></strong></p>
+                            </label>
+                            <label for="pick2"><input type="radio" name="pick" id="pick102">
+                                <p><strong><u>Текст</u></strong></p>
+                            </label>
+                            <label for="pick3"><input type="radio" name="pick" id="pick103">
+                                <p><em><u>Текст</u></em></p>
+                            </label>
+                            <label for="pick4"><input type="radio" name="pick" id="pick104">
+                                <p><strong>Текст</strong></p>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Кнопка наступного питання-->
+                <button id="next__button" onclick="nextQuestion()">
+                    <p>Відповісти</p>
+                </button>
+            </div>
+
+            <!-- Результат тестування-->
+            <section>
+                <div id="resultTest" hidden>
+                    <h1>Результат</h1>
+                    <p id="resLastName">Прізвище: </p>
+                    <p id="resFirstName">Ім'я: </p>
+                    <p id="resGroup">Група: </p>
+                    <p id="resRating">Оцінка: </p>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
